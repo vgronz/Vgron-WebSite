@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Verenoi - Demo</title>
+  <meta name="description" content="Verenoi tarzı demo site — hızlı, minimal, modern." />
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#0f172a">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="brand">Verenoi<span class="dot">.</span></div>
+      <a class="btn" href="#contact">İletişim</a>
+    </nav>
+
+    <div class="hero-content">
+      <h1>Hızlı. Minimal. Keskin.</h1>
+      <p>Bu, verenoi.cc tarzı tek sayfa tanıtım sitesi için örnek şablon. Kendi metinlerin, linklerin ve görsellerin ile değiştir.</p>
+      <div class="actions">
+        <a class="cta" href="#features">Özellikler</a>
+        <a class="ghost" href="#about">Hakkında</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 800 400" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="g" x1="0" x2="1">
+            <stop offset="0%" stop-opacity="0.9" stop-color="#7c3aed"/>
+            <stop offset="100%" stop-opacity="0.9" stop-color="#06b6d4"/>
+          </linearGradient>
+        </defs>
+        <rect width="800" height="400" fill="url(#g)"/>
+      </svg>
+    </div>
+  </header>
+
+  <main>
+    <section id="features" class="section cards">
+      <h2>Özellikler</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Hız</h3>
+          <p>Minimal, sıfır-bekleme deneyimi için optimize edildi.</p>
+        </article>
+        <article class="card">
+          <h3>Güven</h3>
+          <p>HTTPS, Content-Security ve statik hosting ile güvenli yayın.</p>
+        </article>
+        <article class="card">
+          <h3>Özelleştirilebilir</h3>
+          <p>Kolayca renkleri, metinleri ve görselleri değiştir.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <h2>Hakkında</h2>
+      <p>Bu repo GitHub Pages üzerine yayınlanmak üzere hazırlanmıştır. İstersen kendi domain'ini de bağlayabilirsin.</p>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2>İletişim</h2>
+      <p>Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
+      <p>Github: <a href="#">@kullaniciadi</a></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© <span id="year"></span> Verenoi-demo — Oluşturuldu with ❤️</small>
+  </footer>
+
+  <script>
+    // Küçük UX: yıl güncelleme
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
