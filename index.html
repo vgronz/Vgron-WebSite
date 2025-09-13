@@ -5,8 +5,69 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Verenoi - Demo</title>
   <meta name="description" content="Verenoi tarzı demo site — hızlı, minimal, modern." />
-  <link rel="stylesheet" href="styles.css">
   <meta name="theme-color" content="#0f172a">
+  <style>
+    :root{
+      --bg:#071028;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent1:#7c3aed;
+      --accent2:#06b6d4;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: linear-gradient(180deg, #050816 0%, #071028 100%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      min-height:100%;
+    }
+
+    /* Header / Hero */
+    .hero{position:relative;padding:48px 20px 120px;overflow:hidden;}
+    .nav{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto 48px;}
+    .brand{font-weight:700;font-size:20px;letter-spacing:0.6px;}
+    .brand .dot{ color:var(--accent2); margin-left:4px; }
+    .btn{ color:var(--muted); text-decoration:none; padding:8px 12px; border-radius:8px; background:var(--glass); }
+
+    .hero-content{max-width:1100px;margin:0 auto;text-align:left;}
+    .hero-content h1{font-size:48px;margin:6px 0 12px;line-height:1.05;}
+    .hero-content p{ color:var(--muted); max-width:680px; }
+    .actions{ margin-top:22px; display:flex; gap:12px; }
+    .cta{ background:linear-gradient(90deg,var(--accent1),var(--accent2)); color:white; padding:12px 18px; border-radius:12px; text-decoration:none; font-weight:600; }
+    .ghost{ color:var(--muted); text-decoration:none; padding:12px 18px; border-radius:12px; background:transparent; border:1px solid rgba(255,255,255,0.04) }
+
+    /* Hero art */
+    .hero-art{position:absolute;right:-10%;top:10%;width:55%;height:80%;opacity:0.12;transform:rotate(-8deg) scale(1.05);pointer-events:none;}
+
+    /* Sections */
+    .section{ max-width:1100px; margin:56px auto; padding:0 20px; }
+    .cards h2, .about h2, .contact h2{ font-size:22px; margin-bottom:18px; }
+    .grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .card{ background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px; padding:18px; min-height:120px; }
+    .card h3{ margin:0 0 8px; }
+    .card p{ color:var(--muted); margin:0; }
+
+    /* About / Contact */
+    .about p, .contact p{ color:var(--muted); max-width:740px; }
+
+    /* Footer */
+    .footer{ text-align:center; padding:34px 20px; color:var(--muted); border-top:1px solid rgba(255,255,255,0.02); }
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero-content h1{ font-size:34px; }
+      .grid{ grid-template-columns:repeat(1,1fr); }
+      .hero-art{ display:none; }
+    }
+  </style>
 </head>
 <body>
   <header class="hero">
